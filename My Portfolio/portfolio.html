@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Personal Website</title>
+    <link href="portfolio.css" rel="stylesheet" type="text/css"></link>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#html">HTML</a></li>
+                <li><a href="#css">CSS</a></li>
+                <li><a href="#javascript">Javascript</a></li>
+                <li><a href="#php">PHP</a></li>
+                <li><a target="_blank" href="Register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+
+        <section id="html" class="column">
+            <div class="box-container">
+                <a target="_blank" href="https://en.wikipedia.org/wiki/HTML">
+                    <img src="Images/html.jpeg" alt="html">
+                    <p>The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as
+                        JavaScript.
+                    </p>
+                </a>
+            </div>
+        </section>
+        <section id="css" class="column">
+            <div class="box-container">
+                <a target="_blank" href="https://en.wikipedia.org/wiki/CSS">
+                    <img src="Images/css.jpeg" alt=css>
+                    <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
+                </a>
+            </div>
+        </section>
+        <section id="javascript" class="column">
+            <div class="box-container">
+                <a target="blank" href="https://en.wikipedia.org/wiki/JavaScript">
+                    <img src="Images/javascript.jpeg" alt="javascript">
+                    <p>JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it,
+                        such as Node.js, Apache CouchDB and Adobe Acrobat.</p>
+                </a>
+            </div>
+        </section>
+        <section id="php" class="column">
+            <div class="box-container">
+                <a target="_blank" href="https://en.wikipedia.org/wiki/PHP">
+                    <img src="Images/php.jpeg" alt="php">
+                    <p>PHP is a popular general-purpose scripting language that is especially suited to web development. Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.</p>
+                </a>
+            </div>
+        </section>
+    </div>
+    <div id="slideshow">
+        <!--SlideShow Images-->
+        <div class="slide-images">
+            <div id="myslideshow first">
+                <img src="Images/html.jpeg" alt="html">
+                <div class="text"></div>
+            </div>
+            <div id="myslideshow">
+                <img src="Images/css.jpeg" alt=css>
+                <div class="text"></div>
+            </div>
+            <div id="myslideshow">
+                <img src="Images/javascript.jpeg" alt="javascript">
+                <div class="text"></div>
+            </div>
+            <div id="myslideshow">
+                <img src="Images/php.jpeg" alt="php">
+                <div class="text"></div>
+            </div>
+            <!--Next and previous buttons-->
+            <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">
+            &#10095;</a> -->
+        </div>
+        <!--The dots/circles-->
+        <div id="slideDots">
+            <input type="radio" id="radio1">
+            <input type="radio" id="radio2">
+            <input type="radio" id="radio3">
+        </div>
+        <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+        </div>
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+    </div>
+    <script>
+        var slideIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("myslideshow");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {
+                slideIndex = 1
+            }
+            x[slideIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+
+</html>

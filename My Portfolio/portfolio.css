@@ -1,0 +1,176 @@
+body {
+    background-color: bisque;
+}
+
+
+/* bank = []
+option = document.getElementById(‘selectDropdownBank’)
+for(let i = 0; i<=option.length; i++) {
+bank_na.push(option_values[i])
+} */
+
+.container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 15rem 15rem 15rem 15rem;
+}
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+header {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    background-color: #58555A;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li {
+    padding: 1rem 1rem 1rem 0;
+}
+
+nav li a:hover {
+    color: darkblue;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding-left: 1rem;
+}
+
+.column {
+    float: left;
+    /* width: 25%; */
+}
+
+img {
+    WIDTH: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%;
+    height: auto; */
+    border: 1px solid #ddd;
+    /* margin: 1.5rem 1.5rem 1.5rem 1.5rem; */
+}
+
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+section {
+    float: left;
+}
+
+p {
+    align-content: center;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#html,
+#css,
+#php,
+#javascript {
+    align-content: center;
+    border: 1px solid black;
+    /* width: 23%; */
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+#slideshow {
+    overflow: hidden;
+    height: 300px;
+    width: 500px;
+    margin-left: 160px;
+    margin-top: 20px;
+}
+
+#myslideshow {
+    position: relative;
+    width: 1200PX;
+    height: 800px;
+    float: left;
+}
+
+@-webkit-keyframes slide-animation {
+    0% {
+        left: 0px;
+    }
+    10% {
+        left: 0px;
+    }
+    20% {
+        left: 1200px;
+    }
+    30% {
+        left: 1200px;
+    }
+    40% {
+        left: 2400px;
+    }
+    60% {
+        left: 1200px;
+    }
+    70% {
+        left: 1200px;
+    }
+    80% {
+        left: 0px;
+    }
+    90% {
+        left: 0px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+.slide-images {
+    width: 3600px;
+    height: 800px;
+    position: relative;
+    -webkit-animation-name: slide-animation;
+    -webkit-animation-duration: 33s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+
+@media screen and (max-width:600px) {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:900px) {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
