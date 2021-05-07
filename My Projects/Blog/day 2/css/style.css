@@ -1,0 +1,44 @@
+/* my firdt css comment */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: burlywood;
+}
+
+img {
+    border: 10px solid chartreuse;
+}
+
+h1 {
+    border: 10px dotted red;
+    text-align: center;
+}
+
+blockquote {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 4rem;
+    font-style: italic;
+    text-align: center;
+}
+
+cite {
+    font-size: 1.5rem;
+}
+
+.bigbold {
+    font-size: 2rem;
+}
+
+a:link {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: chocolate;
+}
+
+a:visited {
+    color: green;
+    font-weight: 2rem;
+}
