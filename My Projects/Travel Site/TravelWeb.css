@@ -41,7 +41,7 @@
         width: 500%;
         margin: 0;
         left: 0;
-        animation: slider 50s infinite;
+        animation: slider 10s infinite;
     }
     
     .maindiv figure img {
@@ -157,6 +157,15 @@
             display: block;
             margin: 50px 0;
             line-height: 30px;
+        }
+        .maindiv {
+            height: 300px;
+        }
+    }
+    
+    @media (max-width:550px) {
+        .logo {
+            left: 0%;
         }
         .maindiv {
             height: 300px;
