@@ -1,0 +1,272 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #A3CDD9;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+}
+
+nav {
+    background-color: #F2CC39;
+    height: 80px;
+    width: 100%;
+}
+
+.logo {
+    width: 70px;
+    border-radius: 50%;
+    margin-left: 10px;
+    position: absolute;
+    top: 3px;
+    left: 0%;
+}
+
+nav ul {
+    float: right;
+    margin: 15px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin-right: 25px;
+}
+
+nav ul li a {
+    position: relative;
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+nav ul li a:before {
+    position: absolute;
+}
+
+a.active,
+a:hover {
+    background: #506AD4;
+    transition: .5s;
+}
+
+.slider {
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides img {
+    width: 800px;
+    height: 500px;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+
+/* manual slide navigation start*/
+
+.navigation-manual {
+    position: absolute;
+    width: 800px;
+    margin-top: -5%;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: white;
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -20%;
+}
+
+#radio3:checked~.first {
+    margin-left: -40%;
+}
+
+#radio4:checked~.first {
+    margin-left: -60%;
+}
+
+
+/* manual slide navigation end*/
+
+
+/*Automatic slide start*/
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+navigation-auto div {
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked~.navigation-auto.auto-btn1 {
+    background: white;
+}
+
+#radio2:checked~.navigation-auto.auto-btn2 {
+    background: white;
+}
+
+#radio3:checked~.navigation-auto.auto-btn3 {
+    background: white;
+}
+
+#radio4:checked~.navigation-auto.auto-btn4 {
+    background: white;
+}
+
+
+/*Automatic slide end*/
+
+
+/*Burger*/
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+
+/*burger end*/
+
+@media screen and (max-width:850px) {
+    body {
+        overflow-x: hidden;
+    }
+    .slider {
+        width: 700px;
+        height: 500px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .navigation-manual {
+        position: absolute;
+        width: 700px;
+        margin-top: -5%;
+        display: flex;
+        justify-content: center;
+    }
+    nav ul {
+        position: absolute;
+        right: -50px;
+        width: 60%;
+        height: 92vh;
+        top: 9vh;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        background-color: #F2CC39;
+        z-index: 1;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    nav ul li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+}
+
+@media screen and (max-width:600px) {
+    body {
+        overflow-x: hidden;
+    }
+    .slider {
+        width: 600px;
+        height: 450px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .navigation-manual {
+        position: absolute;
+        width: 500px;
+        margin-top: -25%;
+        display: flex;
+        justify-content: center;
+    }
+    nav ul {
+        position: absolute;
+        right: -50px;
+        height: 92vh;
+        top: 9vh;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        background-color: #F2CC39;
+        z-index: 1;
+        align-items: center;
+        width: 30% transform: translateX(100%)
+    }
+    nav ul li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+}
