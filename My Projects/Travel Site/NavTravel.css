@@ -75,6 +75,7 @@ nav {
 article {
     width: 60rem;
     padding: 15px 0;
+    margin: auto;
 }
 
 h1 {
