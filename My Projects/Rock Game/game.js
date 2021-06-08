@@ -4,7 +4,7 @@ const game = () => {
     let cScore = 0;
 
     const startGame = () => {
-
+        debugger;
         const playBtn = document.querySelector(".intro button");
         const introScreen = document.querySelector(".intro");
         const match = document.querySelector(".match");
@@ -15,6 +15,7 @@ const game = () => {
     };
     //match
     const playMatch = () => {
+        debugger;
         const options = document.querySelectorAll(".options button");
         const playerHand = document.querySelector(".player-hand");
         const computerHand = document.querySelector(".computer-hand");
@@ -29,6 +30,7 @@ const game = () => {
         const computerOptions = ["rock", "paper", "scissors"];
 
         options.forEach(option => {
+            debugger;
             option.addEventListener("click", function() {
                 //Computer Choice
                 const computerNumber = Math.floor(Math.random() * 3);
@@ -50,6 +52,7 @@ const game = () => {
     };
 
     const updateScore = () => {
+        debugger;
         const playerScore = document.querySelector(".player-score p");
         const computerScore = document.querySelector(".computer-score p");
         playerScore.textContent = pScore;
@@ -57,6 +60,7 @@ const game = () => {
     };
 
     const compareHands = (playerChoice, computerChoice) => {
+        debugger;
         const winner = document.querySelector(".winner");
         //tie
         if (playerChoice === computerChoice) {
